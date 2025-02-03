@@ -11,13 +11,13 @@
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Alexsander Barbosa 1</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Bruno Frossard 2</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Isabela Conceição 3</a> 
+- <a href="https://www.linkedin.com/in/victorbarq/">Leonardo Lameda 4</a> 
+- <a href="https://www.linkedin.com/in/victorbarq/">Maria Eduarda Oliveira 5</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Matheus Silva 6</a> 
+- <a href="https://www.linkedin.com/in/victorbarq/">Stefanne Soares 7</a>
 
 ## 👩‍🏫 Professores:
 ### Orientador(a) 
