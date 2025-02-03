@@ -21,7 +21,7 @@
 
 ## 👩‍🏫 Professores:
 ### Orientador(a) 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do orientador</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Laíza Ribeiro</a>
 ### Instrutores
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do instrutor 1</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do instrutor 2</a> 
