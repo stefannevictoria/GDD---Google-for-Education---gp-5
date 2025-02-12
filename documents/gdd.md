@@ -70,17 +70,20 @@
 
 ## 1.2. Requisitos do Projeto (sprints 1 e 2)
 
-*Posicione aqui a lista de requisitos levantados para o projeto, sejam pedidos do parceiro ou invenções do grupo. Descreva-os de forma objetiva, de modo que seja possível entender claramente como implementá-los tecnicamente.*
 
-*ATUALIZE ESTA SEÇÃO SEMPRE QUE ALGUM REQUISITO MUDAR EM SEU PROJETO*
+| Número | Requisito               | Descrição | Objetivo | Imagem |
+|--------|-------------------------|-----------|----------|--------|
+| 1      | Tela de Abertura        | O jogo começará com um termo de consentimento, e um botão grande de "JOGAR" para iniciar a experiência. | Introduzir o jogador à temática da proteção de dados desde o início, criando uma conexão com o tema principal do jogo. | ![#](#) |
+| 2      | Escolha do personagem   | O jogador poderá escolher entre diferentes personagens. | Personalizar a experiência do jogador, permitindo que ele se identifique com o avatar escolhido e aumentando a imersão no jogo. | ![#](#) |
+| 3      | Feedback Educacional    | Após cada tarefa, o jogo exibirá um feedback educativo, citando os artigos da LGPD relacionados. | Associar as atividades do jogo com a legislação real, garantindo que o jogador compreenda a base legal das proteções de dados. | ![#](#) |
+| 4      | Timer                   | O jogador terá um tempo limite de 10 minutos para resolver todas as tarefas antes que seus dados sejam vazados. | Criar um senso de urgência e desafio, incentivando o jogador a agir rapidamente para proteger seus dados. | ![#](#) |
+| 5      | Sistema de Classificação | O jogador receberá uma medalha (ouro, prata ou bronze) dependendo do tempo gasto para concluir o jogo. | Estimular a repetição do jogo para melhor desempenho, incentivando a aprendizagem gamificada. | ![#](#) |
+| 6      | Livro de Curiosidades    | Um livrinho abaixo do timer será atualizado a cada fase com curiosidades sobre a LGPD. | Fornecer aprendizado progressivo, incentivando o jogador a descobrir novas informações ao longo do jogo. | ![#](#) |
+| 7      | Mensagem Final          | Após vencer o jogo, o jogador verá uma mensagem educativa sobre segurança digital, incluindo um passo a passo de como reagir em caso de vazamento de dados. | Reforçar o aprendizado e fornecer orientações reais para que o jogador saiba como se proteger na vida real. | ![#](#) |
+| 8      | Mapa                    | Um mapa no canto da tela mostrará as tasks pendentes, destacadas com um ícone de exclamação. | Ajudar o jogador a se orientar dentro do ambiente e a entender quais missões ainda precisam ser concluídas. | ![#](#) |
+| 9      | Controle do personagem   | O jogador poderá movimentar seu personagem utilizando as teclas de seta. | Tornar a experiência mais interativa e dinâmica, permitindo a livre exploração do ambiente e imersão no jogo. | ![#](#) |
 
-*Exemplo de tabela de requisitos*
-\# | Requisito  
---- | ---
-1 | O controle do personagem será realizado usando as teclas WASD para navegação pelas fases
-2 | O personagem perde uma vida toda vez que tocar em um inimigo ou em algum projétil inimigo
-3 | O jogo deve possuir uma tela de abertura para o jogador selecionar se quer jogar sozinho ou em dupla
-4 | ...
+
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
