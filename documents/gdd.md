@@ -73,9 +73,9 @@
 
 | Número | Requisito               | Descrição | Objetivo |
 |--------|-------------------------|-----------|----------|
-| 1      | Tela de Abertura        | O jogo começará com um termo de consentimento, e um botão grande de "JOGAR" para iniciar a experiência. | Introduzir o jogador à temática da proteção de dados desde o início, criando uma conexão com o tema principal do jogo. |
+| 1      | Desenvolver Tela de Abertura        | O jogo começará com um termo de consentimento, e um botão grande de "JOGAR" para iniciar a experiência. | Introduzir o jogador à temática da proteção de dados desde o início, criando uma conexão com o tema principal do jogo. |
 | 2      | Escolha do personagem   | O jogador poderá escolher entre diferentes personagens. | Personalizar a experiência do jogador, permitindo que ele se identifique com o avatar escolhido e aumentando a imersão no jogo. | 
-| 3      | Feedback Educacional    | Após cada tarefa, o jogo exibirá um feedback educativo, citando os artigos da LGPD relacionados. | Associar as atividades do jogo com a legislação real, garantindo que o jogador compreenda a base legal das proteções de dados. | 
+| 3      | Elaborar Feedback Educacional    | Após cada tarefa, o jogo exibirá um feedback educativo, citando os artigos da LGPD relacionados. | Associar as atividades do jogo com a legislação real, garantindo que o jogador compreenda a base legal das proteções de dados. | 
 | 4      | Timer                   | O jogador terá um tempo limite de 10 minutos para resolver todas as tarefas antes que seus dados sejam vazados. | Criar um senso de urgência e desafio, incentivando o jogador a agir rapidamente para proteger seus dados. | 
 | 5      | Sistema de Classificação | O jogador receberá uma medalha (ouro, prata ou bronze) dependendo do tempo gasto para concluir o jogo. | Estimular a repetição do jogo para melhor desempenho, incentivando a aprendizagem gamificada. | 
 | 6      | Livro de Curiosidades    | Um livrinho abaixo do timer será atualizado a cada fase com curiosidades sobre a LGPD. | Fornecer aprendizado progressivo, incentivando o jogador a descobrir novas informações ao longo do jogo. | 
