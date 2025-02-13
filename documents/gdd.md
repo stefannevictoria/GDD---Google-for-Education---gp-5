@@ -71,8 +71,8 @@
 ## 1.2. Requisitos do Projeto (sprints 1 e 2)
 
 
-| Número | Requisito               | Descrição | Objetivo | Imagem |
-|--------|-------------------------|-----------|----------|--------|
+| Número | Requisito               | Descrição | Objetivo |
+|--------|-------------------------|-----------|----------|
 | 1      | Tela de Abertura        | O jogo começará com um termo de consentimento, e um botão grande de "JOGAR" para iniciar a experiência. | Introduzir o jogador à temática da proteção de dados desde o início, criando uma conexão com o tema principal do jogo. |
 | 2      | Escolha do personagem   | O jogador poderá escolher entre diferentes personagens. | Personalizar a experiência do jogador, permitindo que ele se identifique com o avatar escolhido e aumentando a imersão no jogo. | 
 | 3      | Feedback Educacional    | Após cada tarefa, o jogo exibirá um feedback educativo, citando os artigos da LGPD relacionados. | Associar as atividades do jogo com a legislação real, garantindo que o jogador compreenda a base legal das proteções de dados. | 
