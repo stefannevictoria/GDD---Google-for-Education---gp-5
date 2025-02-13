@@ -231,7 +231,299 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 
 ## 4.1. Desenvolvimento preliminar do jogo (sprint 1)
 
-*Descreva e ilustre aqui o desenvolvimento da sua primeira versão do jogo, explicando brevemente o que foi entregue em termos de código e jogo. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e próximos passos.*
+*Requisito Implementado:
+Requisito 1: Tela de Abertura 
+Descrição: O jogo começará com um termo de consentimento, e um botão grande de "JOGAR" para iniciar a experiência.
+Objetivo: Introduzir o jogador à temática da proteção de dados desde o início, criando uma conexão com o tema principal do jogo.
+
+Tela inicial
+Tela de abertura do nosso jogo, com botão funcional de jogar (play).
+
+Visual:
+<img src="/assets/telavisual.png">
+
+Código:
+
+```
+// Criando classe para a cena
+class CenaMenu extends Phaser.Scene {
+    constructor() {
+        super({ key: "CenaMenu" });
+    }
+
+    preload(){
+        this.load.image('bg', 'assets/menubgg.PNG');
+        this.load.image('logo', 'assets/logoHackerados1.png')
+        this.load.image('button', 'assets/playButton.png')
+    }
+
+    create() {
+        // Adicionando fundo e logo
+        this.add.image(767.5, 365, 'bg').setScale(1);
+        this.add.image(750, 160, "logo").setScale(0.9);
+
+        // Adicionando botão e atribuindo a função de iniciar a animação de Fade Out e trocar de cena quando acabar
+        var botao = this.add.image(745, 365, "button").setScale(0.5)
+            .setInteractive()
+            .on("pointerdown", () => {
+                this.cameras.main.fadeOut(1350)
+                });
+
+                this.cameras.main.once("camerafadeoutcomplete", () => {
+                    this.scene.start("CenaTermo")}); 
+
+            // Animação de aumentar de tamanho
+            this.tweens.add({
+                targets: botao,
+                scaleX: 0.55, 
+                scaleY: 0.55,
+                duration: 500, 
+                yoyo: true, 
+                repeat: -1, 
+                ease: "Sine.easeInOut" 
+            });
+
+            // Diminuindo a transparência e tamanho quando o mouse está em cima do botão
+            botao.on("pointerover", () => {
+                botao.setScale(0.45);
+                botao.setAlpha(0.7); 
+            });
+            
+            botao.on("pointerout", () => {
+                botao.setScale(0.5);
+                botao.setAlpha(1);
+            });
+                       
+    }
+}
+```
+Termo de uso
+
+Visual:
+<img src="/assets/termovisual.png">
+
+
+Código:
+```
+// Criando classe para a cena
+class CenaTermo extends Phaser.Scene {
+    constructor() {
+        super({ key: 'CenaTermo'});
+    }
+
+    preload() {
+        this.load.image('bg', 'assets/menubgg.PNG');
+        this.load.image('agreeButton', 'assets/agreeButton.png');
+
+    };
+
+    create() {
+        // Animação de Fade In no início da cena
+        this.cameras.main.fadeIn(500);
+        
+        // Adcionando fundo e diminuindo transparência
+        const fundo = this.add.image(740, 365, 'bg').setScale(1.2)
+        fundo.setAlpha(0.2);
+
+        var texx = "AO CONTINUAR, VOCÊ CONFIRMA SUA CONCORDÂNCIA COM OS TERMOS ACIMA, ASSEGURANDO UMA EXPERIÊNCIA TOTALMENTE INTEGRADA E OTIMIZADA."
+
+        // Adicionando textos 
+        this.add.text(737.5, 365, 'TERMO DE USO:').setOrigin(0.5, 0.5)
+        this.add.text(737.5, 400, texx).setOrigin(0.5, 0.5)
+        
+        // Adicionando botão e atribuindo a função de iniciar a animação de Fade Out e trocar de cena quando acabar
+        var botaoConcordar = this.add.image(737.5, 450, "agreeButton")
+            .setInteractive()
+            .on("pointerdown", () => {
+                this.cameras.main.fadeOut(2000)
+                });
+
+                this.cameras.main.once("camerafadeoutcomplete", () => {
+                    this.scene.start("CenaBug")}); 
+    };
+}
+```
+
+Introdução ao game:
+
+Visual:
+<img src="/assets/introducaovisual.png">
+
+
+Código:
+```
+// Criando classe para a cena
+class CenaBug extends Phaser.Scene {
+    constructor (){
+        super({key: "CenaBug"})
+    }
+
+    preload() {
+        this.load.spritesheet('glitch', "assets/glitch.png", {
+            frameWidth: 300,
+            frameHeight: 166
+        });
+
+        this.load.image("botaoEntendido", "assets/entendidoButton.png")
+    }
+
+    create() {
+        
+        // Adicionando sprite do bug do fundo e diminuindo e transparência
+        this.bug = this.add.sprite(737.5, 270, "glitch").setScale(7);
+        this.bug.setAlpha(0.3)
+
+        // Criando animação de bug e reproduzindo
+        this.anims.create({
+            key: 'bugou',
+            frames: this.anims.generateFrameNumbers('glitch', {start: 0, end: 20}),
+            frameRate: 15,
+            repeat: -1
+        });
+
+        this.bug.anims.play('bugou', true);
+
+        var textin = 'Você está sendo hackeado!!!! Possui 10 minutos para resolver suas tasks, antes que seus dados sejam vazados'
+
+        // Adicionando botão e atribuindo a função de iniciar a animação de Fade Out e trocar de cena quando acabar
+        this.add.text(737.5, 365, textin).setOrigin(0.5)
+        var botaozinho = this.add.image(737.5, 430, "botaoEntendido").setOrigin(0.5, 0.5)
+            .setInteractive()
+            .on("pointerdown", () => {
+                this.cameras.main.fadeOut(1350)
+            });
+
+            this.cameras.main.once("camerafadeoutcomplete", () => {
+                this.scene.start("CenaEscola");
+            });
+        botaozinho.setScale(0.75);
+    };
+}
+```
+
+Mapa Principal:
+
+Visual:
+<img src="/assets/mapavisual.png">
+
+Código:
+```
+//Criando classe para a cena 
+class CenaEscola extends Phaser.Scene {
+    constructor() {
+        super({ key: 'CenaEscola'});
+    }
+
+    preload(){
+        this.load.image('inSchool', 'assets/mapaEscola.png');
+
+        this.load.spritesheet("player", "assets/Unarmed_Walk/playerAnim.png", {
+            frameWidth: 64,
+            frameHeight: 64
+        });
+    }
+
+    
+    create() {
+        // Animação de Fade In no início da cena
+        this.cameras.main.fadeIn(500);
+        
+        // Adicionando o fundo e mudando a escala
+        var background = this.add.image(767.5, 365, 'inSchool').setOrigin(0.5, 0.5);
+        background.setScale(1.5)
+        
+        
+        // Criando o jogador
+        this.player = this.physics.add.sprite(400, 400, "player").setScale(2.7);
+        this.player.setCollideWorldBounds(true);
+
+        // Criando animações
+        this.anims.create({
+            key: "andar-baixo",
+            frames: this.anims.generateFrameNumbers("player", { start: 0, end: 5 }),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        this.anims.create({
+            key: "andar-esquerda",
+            frames: this.anims.generateFrameNumbers("player", { start: 6, end: 11 }),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        this.anims.create({
+            key: "andar-direita",
+            frames: this.anims.generateFrameNumbers("player", { start: 12, end: 17 }),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        this.anims.create({
+            key: "andar-cima",
+            frames: this.anims.generateFrameNumbers("player", { start: 18, end: 23 }),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        // Criando os controles
+        this.cursor = this.input.keyboard.createCursorKeys();
+        this.keys = this.input.keyboard.addKeys({
+            W: Phaser.Input.Keyboard.KeyCodes.W,
+            A: Phaser.Input.Keyboard.KeyCodes.A,
+            S: Phaser.Input.Keyboard.KeyCodes.S,
+            D: Phaser.Input.Keyboard.KeyCodes.D
+        });
+    }
+
+    update(){
+            
+        // Definindo o estado inicial do personagem
+        let moving = false;
+        this.player.setVelocity(0);
+
+        // Adicionando os comandos que vão rodar quando cada tecla são pressionadas
+        if (this.cursor.left.isDown || this.keys.A.isDown) {
+            this.player.setVelocityX(-160);
+            this.player.anims.play("andar-esquerda", true);
+            moving = true;
+        } 
+        
+        else if (this.cursor.right.isDown || this.keys.D.isDown) {
+            this.player.setVelocityX(160);
+            this.player.anims.play("andar-direita", true);
+            moving = true;
+        } 
+    
+        else if (this.cursor.up.isDown || this.keys.W.isDown) {
+            this.player.setVelocityY(-160);
+            this.player.anims.play("andar-cima", true);
+            moving = true;
+        } 
+    
+        else if (this.cursor.down.isDown || this.keys.S.isDown) {
+            this.player.setVelocityY(160);
+            this.player.anims.play("andar-baixo", true);
+            moving = true;
+        } 
+
+        if (!moving) {
+            this.player.anims.stop();
+        }
+    }
+}
+```
+
+
+Dificuldades durante o desenvolvimento:
+Uma das principais dificuldades foi com certeza aprender uma nova linguagem de programação e, juntamente a isso, a incrementação e utilização de um framework (Phaser) que tornou o desenvolvimento do jogo desafiador. 
+Na produção do jogo em si, a compreensão da mecânica de cenas foi um desafio, de modo a compreender cada parte do código e suas respectivas funções no funcionamento do projeto, bem como a adição de funcionalidade aos botões para executarem o que queríamos. A movimentação do personagem do zero em pixels, importando para linha de código, assim realizando a animação, além disso a limitação de áreas para quais o personagem pode ultrapassar ou não.
+Houve também a necessidade de aprender a utilizar softwares distintos para a parte visual do jogo, como Tiled e Pisqel, utilizados para desenvolver os mapas e personagens do jogo, além disso tivemos que desenvolver o lado tático para elaborar uma organização funcional dos códigos, para que fosse compreensível a todos e de fácil ajuste se necessário.
+
+Próximos passos:
+Incluir público alvo
+Incluir diversidade e representatividade dos personagens
+Elaborar 2 cenas integrando mapa e a mecânica do jogo com códigos comentados por grupo de funcionalidade*
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
