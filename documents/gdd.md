@@ -5,9 +5,22 @@
 
 **_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final_**
 
-## Nome do Grupo
+## Hackeados
 
-#### Nomes dos integrantes do grupo
+#### Integrantes do Grupo
+Alexsander da Silva Barbosa
+
+Bruno Frossard Silva
+
+Isabela Szolnoky Ferreira Cabral Souza da Conceição
+
+Leonardo Nicoli Lameda
+
+Maria Eduarda Barbosa Oliveira
+
+Matheus Ferreira da Silva
+
+Stefanne Victória Andrade Soares
 
 
 
