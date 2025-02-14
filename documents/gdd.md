@@ -235,6 +235,8 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 Requisito 1: Tela de Abertura 
 Descrição: O jogo começará com um termo de consentimento, e um botão grande de "JOGAR" para iniciar a experiência.
 Objetivo: Introduzir o jogador à temática da proteção de dados desde o início, criando uma conexão com o tema principal do jogo.
+Requisito 2: Controle do Personagem
+Descrição: Programar a movimentação do personagem pelo mapa.
 
 Tela inicial
 Tela de abertura do nosso jogo, com botão funcional de jogar (play).
